@@ -1,104 +1,54 @@
 extends ../../layout/main
 
+mixin filterButton(label, name)
+  .filter__item-container
+    input.filter__input(type="checkbox", id=`${name}`, name=`${name}`)/
+    label.filter__item(for=`${name}`) #{label}
+
 block content
+  -
+    self.portfolio = [{
+      topic: 'NodeJS',
+      heading: 'Natours',
+      excerpt: 'A tour booking app built with NodeJS Express and Pug templating system',
+      date: '11/11/2019',
+      imgUrl: '/src/img/sitting-lake.jpg'
+    }, {
+      topic: 'ReactJS',
+      heading: 'CRWN Clothing',
+      excerpt: 'An online clothing store built with React and NodeJS Express',
+      date: '27/11/2021',
+      imgUrl: '/src/img/clothing-store.jpg'
+    }, {
+      topic: 'Javascript',
+      heading: 'Forkify',
+      excerpt: 'A recipe finding web app built with vanilla Javascript',
+      date: '22/11/2021',
+      imgUrl: '/src/img/cooking.jpg'
+    }]
+
+
   section.portfolio
     .portfolio__container.container
-      h2.heading-secondary.portfolio__heading Portfolio
+      h2.heading-primary.portfolio__heading Portfolio️
+      //p.paragraph.paragraph--abstract.portfolio__abstract
+      //  | I learn by doing
 
       // PORTFOLIO FILTER
       form.portfolio__filter.filter.filter__list
-        div.filter__item-container
-          input#react.filter__input(type="checkbox", name="react")/
-          label.filter__item(for="react") React
-
-        div.filter__item-container
-          input#node.filter__input(type="checkbox", name="nodejs")/
-          label.filter__item(for="node") NodeJS
-
-        div.filter__item-container
-          input#nextjs.filter__input(type="checkbox", name="nextjs")/
-          label.filter__item(for="nextjs") NextJS
-
-        div.filter__item-container
-          input#mongodb.filter__input(type="checkbox", name="mongodb")/
-          label.filter__item(for="mongodb") MongoDB
-
-        div.filter__item-container
-          input#graphql.filter__input(type="checkbox", name="graphql")/
-          label.filter__item(for="graphql") GraphQL
-
-        div.filter__item-container
-          input#headlesscms.filter__input(type="checkbox", name="headlesscms")/
-          label.filter__item(for="headlesscms") Headless CMS
-
-        div.filter__item-container
-          input#htmlcss.filter__input(type="checkbox", name="htmlcss")/
-          label.filter__item(for="htmlcss") HTML & CSS
+        +filterButton('React', 'react')
+        +filterButton('NextJS', 'nextjs')
+        +filterButton('NodeJS', 'nodejs')
+        +filterButton('ExpressJS', 'expressjs')
+        +filterButton('MongoDB', 'mongodb')
+        +filterButton('GraphQL', 'graphql')
+        +filterButton('Headless CMS', 'headless-cms')
+        +filterButton('HTML5 & CSS3', 'html5-css3')
 
       // PORTFOLIO_LIST
       .portfolio__list
-        article.card.card--vertical.portfolio__item
-          img.card__thumbnail(src="/src/img/coding.jpg")/
-
-          .card__text-box
-            a.card__topic.card__topic--primary NodeJS
-            h5.card__heading Natours
-            p.card__excerpt A tour booking web app utilizing NodeJS and Pug templating
-            time.card__datetime 📅 11/11/2019
-
-        article.card.card--vertical
-          img.card__thumbnail(src="/src/img/coding.jpg")/
-
-          .card__text-box
-            a.card__topic.card__topic--primary NodeJS
-            h5.card__heading Natours
-            p.card__excerpt A tour booking web app utilizing NodeJS and Pug templating
-            time.card__datetime 📅 11/11/2019
-
-
-        article.card.card--vertical
-          img.card__thumbnail(src="/src/img/coding.jpg")/
-
-          .card__text-box
-            a.card__topic.card__topic--primary NodeJS
-            h5.card__heading Natours
-            p.card__excerpt A tour booking web app utilizing NodeJS and Pug templating
-            time.card__datetime 📅 11/11/2019
+        each project in self.portfolio
+          +card(project, true, 'portfolio__item')
 
       .portfolio__pagination
-        .pagination
-          .pagination__item.pagination__item--prev
-            svg.pagination__icon(
-              xmlns="http://www.w3.org/2000/svg",
-              fill="none",
-              viewBox="0 0 24 24",
-              stroke="currentColor"
-            )
-              path(
-                stroke-linecap="round",
-                stroke-linejoin="round",
-                stroke-width="2",
-                d="M15 19l-7-7 7-7"
-              )
-            | Prev
-
-          .pagination__item.pagination__item--current
-            | Page&nbsp;
-            span 2&nbsp;
-            | of&nbsp;
-            span 3
-
-          .pagination__item.pagination__item--next
-            | Next
-            svg.pagination__icon(
-              xmlns="http://www.w3.org/2000/svg",
-              fill="none",
-              viewBox="0 0 24 24",
-              stroke="currentColor"
-            )
-              path(
-                stroke-linecap="round",
-                stroke-linejoin="round",
-                stroke-width="2",
-                d="M9 5l7 7-7 7"
-              )/
+        +pagination(3, 5)

@@ -1,0 +1,9 @@
+mixin formInput(type, label, identifier, extraClasses)
+  div(class=`form__group ${extraClasses ? extraClasses : ''}`)
+    label.form__label(for={identifier}) #{label}
+    input.form__input-text(id={identifier}, name={identifier}, type={type})
+
+mixin formTextarea(label, identifier, extraClasses, rows)
+  div(class=`form__group ${extraClasses ? extraClasses : ''}`)
+    label.form__label(for={identifier}) #{label}
+    textarea.form__textarea(id={identifier}, name={identifier} rows=`${ rows ? rows : '5' }`)

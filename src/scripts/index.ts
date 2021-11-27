@@ -1,4 +1,5 @@
 const body = document.querySelector<HTMLBodyElement>('body')!;
+const form = document.querySelector<HTMLFormElement>('form');
 
 const toggleDarkMode = document.getElementById(
   'toggle-dark-mode'
@@ -48,3 +49,9 @@ reactInput.addEventListener('change', function () {
 
   console.log('uncheck');
 });
+
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+  });
+}

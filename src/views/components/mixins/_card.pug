@@ -1,0 +1,10 @@
+mixin card(card, isVertical, extraClasses)
+  article(class=`card ${isVertical ? 'card--vertical' : ''} ${extraClasses ? extraClasses : ''}`)
+    img.card__thumbnail(src=`${card.imgUrl}`, alt=`${card.heading}`)/
+
+    .card__text-box
+      a.card__topic.card__topic--primary #{card.topic}
+      h5.card__heading #{card.heading}
+      p.card__excerpt #{card.excerpt}
+      time.card__datetime 📅 #{card.date} #{card.time ? `- 🕜 ${card.time}` : ''}
+
