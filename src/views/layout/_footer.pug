@@ -1,0 +1,25 @@
+include ../components/_logo
+
+-
+  self.imgPath = '/src/img'
+
+// FOOTER
+footer.footer
+  .footer__container.container
+    .footer__column.footer__column--full
+      .footer__logo-box
+        +logo("footer__logo")
+        .footer__logo-text Hugh's Home
+
+      p.footer__copyright
+        | Design copyright by ElegantStack. Built from scratch & added personal touch by&nbsp;
+        span Hugh Nguyen.
+        br/
+        a.footer__external-link--text(href="https://www.freepik.com/vectors/work", target="_blank")
+          | Work vector created by stories - www.freepik.com
+
+      p.footer__powered-by Powered by
+        img.footer__powered-by-logo(
+          src=`${self.imgPath}/nextjs-logo-dark.svg`,
+          alt="NextJS Logo"
+        )/

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="styles/main.scss" />
+    <script type="module" src="scripts/index.ts" defer></script>
+    <title>🚀 Hugh's Home</title>
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="container header__container">
+        <!-- LOGO BOX -->
+        <a class="header__logo-box" href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__logo"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <div class="header__logo-text">Hugh's Home</div>
+        </a>
+
+        <!-- SEARCH -->
+        <form class="header__search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__search-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+          <input
+            type="text"
+            class="header__search-input"
+            placeholder="Search for projects"
+          />
+        </form>
+
+        <!-- NAV & TOGGLE -->
+        <div class="header__group-nav-toggle">
+          <!-- NAV -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="./about.html" class="header__nav-link">About Me</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="./portfolio.html" class="header__nav-link">
+                  Portfolio
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="./contact.html" class="header__nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- TOGGLE -->
+          <div class="header__toggle-container">
+            <label class="toggle">
+              <input
+                id="toggle-dark-mode"
+                type="checkbox"
+                class="toggle__checkbox"
+              />
+
+              <span class="toggle__slider toggle__slider--round">
+                <span class="toggle__icon-win toggle__icon-win--dark">🌙️</span>
+                <span class="toggle__icon-win toggle__icon-win--light">☀️</span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main class="main">
+      <section class="contact">
+        <div class="contact__container container">
+          <h2 class="heading-primary">Let's Connect 🤝</h2>
+          <p class="paragraph paragraph--abstract">
+            Thank you for checking out my website 🙏. If you have any questions,
+            feel free to shoot me an email 📧. I'll get back to you as soon as I
+            can 🙂.
+          </p>
+          <div class="contact__form-container">
+            <form action="" class="form form--inline form-contact">
+              <div class="form__group form-contact__name">
+                <label for="name" class="form__label">Name</label>
+                <input type="text" id="name" class="form__input-text" />
+              </div>
+              <div class="form__group form-contact__company">
+                <label for="company" class="form__label">Company</label>
+                <input type="text" id="company" class="form__input-text" />
+              </div>
+              <div class="form__group form-contact__email">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" id="email" class="form__input-text" />
+              </div>
+              <div class="form__group form-contact__phone">
+                <label for="phone" class="form__label">Phone</label>
+                <input type="tel" id="phone" class="form__input-text" />
+              </div>
+              <div class="form__group form-contact__subject">
+                <label for="subject" class="form__label">Subject</label>
+                <input type="text" id="subject" class="form__input-text" />
+              </div>
+              <div class="form__group form-contact__message">
+                <label for="message" class="form__label">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  class="form__textarea"
+                ></textarea>
+              </div>
+              <div class="form__group form__group--btn form-contact__btn">
+                <button type="submit" class="btn btn--primary">Submit</button>
+                <button type="reset" class="btn">Clear</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__column footer__column--full">
+          <div class="footer__logo-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="footer__logo"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div class="footer__logo-text">Hugh's Home</div>
+          </div>
+          <p class="footer__copyright">
+            Design by FlexiBlog. Built by Hugh Nguyen.
+          </p>
+          <p class="footer__powered-by">
+            Powered by
+            <img
+              src="img/nextjs-logo-dark.svg"
+              alt="Next.JS logo"
+              class="footer__powered-by-logo"
+            />
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+  </body>
+</html>

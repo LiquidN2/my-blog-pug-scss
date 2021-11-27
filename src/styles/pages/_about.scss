@@ -1,0 +1,38 @@
+.about {
+  background-color: var(--background-color);
+
+  &__container {
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    align-items: center;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+  }
+
+  &__abstract {
+    grid-column: 1 / -1;
+  }
+
+  &__artwork-container {
+    grid-column: 1 / 2;
+  }
+
+  &__artwork {
+    width: 100%;
+  }
+
+  &__intro {
+    grid-column: 2 / 3;
+  }
+
+  &__education {
+    margin-top: 6rem;
+  }
+
+  &__experience {
+  }
+}

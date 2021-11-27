@@ -1,0 +1,38 @@
+.contact {
+  background-color: var(--background-color);
+
+  &__container {
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  &__abstract {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  &__form-container {
+    //margin-top: 6rem;
+    //background-color: white;
+    //border-radius: 1rem;
+    //padding: 4rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / span 2;
+  }
+
+  &__artwork-container {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  &__artwork {
+    width: 100%;
+  }
+}

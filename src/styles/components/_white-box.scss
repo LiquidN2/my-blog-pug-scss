@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as *;
+
+.white-box {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 1rem;
+
+  @include box-shadow;
+}

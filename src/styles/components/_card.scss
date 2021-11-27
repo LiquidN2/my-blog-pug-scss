@@ -1,0 +1,92 @@
+@use '../abstracts/mixins' as *;
+
+.card {
+  background-color: white;
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  transition: all 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
+    //@include box-shadow;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    width: 21rem;
+    height: 21rem;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+
+  &--vertical &__thumbnail {
+    width: 31rem;
+    height: 31rem;
+  }
+
+  &__text-box {
+    padding: 2rem 3rem;
+  }
+
+  &--vertical &__text-box {
+    padding: 3rem 1rem 1rem;
+  }
+
+  &__topic {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--color-light-lighter-3);
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-gray-lighter);
+    margin-bottom: 2rem;
+
+    &--primary {
+      background-color: var(--color-primary);
+      color: white;
+    }
+
+    &--secondary {
+      background-color: var(--color-secondary);
+      color: white;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    color: var(--color-gray);
+    margin-bottom: 2rem;
+  }
+
+  &__excerpt {
+    font-size: 1.4rem;
+    color: var(--color-gray-lighter);
+    margin-bottom: 2rem;
+    //font-weight: 300;
+  }
+
+  &__datetime {
+    font-size: 1.5rem;
+    color: var(--color-gray-lighter);
+    display: flex;
+    align-items: center;
+  }
+
+  &__datetime-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-gray-lighter);
+    margin-right: 1rem;
+  }
+}
+
+.card-vertical {
+}

@@ -1,0 +1,114 @@
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 4.5rem;
+  height: 2.6rem;
+
+  &__checkbox {
+    //opacity: 0;
+    //width: 0;
+    //height: 0;
+    display: none;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-light-lighter-3);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 1.8rem;
+      width: 1.8rem;
+      left: 0.4rem;
+      bottom: 0.4rem;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    &--round {
+      border-radius: 3.4rem;
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__checkbox:checked + &__slider {
+    background-color: var(--color-primary);
+  }
+
+  &__checkbox:focus + &__slider {
+    box-shadow: 0 0 1px var(--color-primary);
+  }
+
+  &__checkbox:checked + &__slider:before {
+    -webkit-transform: translateX(1.9rem);
+    -ms-transform: translateX(1.9rem);
+    transform: translateX(1.9rem);
+  }
+
+  // Heroicons
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    position: absolute;
+    top: 0.4rem;
+
+    &--light {
+      color: var(--font-color-header);
+      right: 0.3rem;
+    }
+
+    &--dark {
+      color: white;
+      left: 0.3rem;
+      opacity: 0;
+    }
+  }
+
+  &__checkbox:checked + &__slider &__icon--light {
+    opacity: 0;
+  }
+
+  &__checkbox:checked + &__slider &__icon--dark {
+    opacity: 1;
+  }
+
+  // Windows icon
+  &__icon-win {
+    display: inline-block;
+    position: absolute;
+    top: 0.4rem;
+    font-size: 1.2rem;
+    transition: opacity 0.2s;
+
+    &--light {
+      right: 0.4rem;
+      opacity: 1;
+    }
+
+    &--dark {
+      left: 0.4rem;
+      opacity: 0;
+    }
+  }
+
+  &__checkbox:checked + &__slider &__icon-win--light {
+    opacity: 0;
+  }
+
+  &__checkbox:checked + &__slider &__icon-win--dark {
+    opacity: 1;
+  }
+}

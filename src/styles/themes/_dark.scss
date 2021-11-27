@@ -1,0 +1,161 @@
+.dark-mode {
+  background-color: var(--color-dark);
+
+  // TYPOGRAPHY
+  .heading-primary,
+  .heading-secondary {
+    color: var(--color-light-lighter-2);
+  }
+
+  .paragraph {
+    color: var(--color-light);
+  }
+
+  // HEADER
+  .header {
+    background-color: var(--color-gray);
+  }
+
+  .header__logo-text,
+  .header__nav-link {
+    color: var(--color-light);
+  }
+
+  .header__nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  // SECTION HERO
+  .section-hero {
+    background-color: var(--color-gray);
+  }
+
+  .section-hero__heading {
+    color: var(--color-light);
+
+    &--sub {
+      color: var(--color-light-lighter-3);
+    }
+  }
+
+  // SECTION GREET
+  .section-greet {
+    background-color: var(--color-dark);
+
+    &__text {
+      color: var(--color-light);
+    }
+  }
+
+  // SECTION FEATURED
+  .section-featured {
+    background-color: var(--color-dark);
+
+    &__heading {
+      color: var(--color-light);
+      border-color: var(--color-gray);
+    }
+  }
+
+  // CARD
+  .card {
+    background-color: var(--color-gray);
+
+    &__heading {
+      color: var(--color-light-lighter-2);
+    }
+
+    &__excerpt,
+    &__datetime {
+      color: var(--color-light);
+    }
+  }
+
+  // UTIL-BOX
+  .util-box {
+    &__heading {
+      color: var(--color-light);
+    }
+
+    &__tab-thumbnail {
+      background-color: var(--color-gray-lighter);
+    }
+
+    &__tab-text {
+      background-color: var(--color-gray);
+      color: var(--color-light-lighter-2);
+    }
+
+    &__tag-group {
+      background-color: var(--color-gray);
+    }
+
+    &__tag {
+      background-color: var(--color-gray-lighter);
+      color: var(--color-light-lighter-3);
+
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  //WHITE-BOX
+  .white-box {
+    background-color: var(--color-gray);
+  }
+
+  // FILTER CARD
+  .filter {
+    &__item {
+      background-color: var(--color-gray);
+      color: var(--color-light-lighter-2);
+    }
+  }
+
+  // FOOTER
+  .footer {
+    background-color: var(--color-gray);
+
+    &__logo-text {
+      color: var(--color-light-lighter-2);
+    }
+
+    &__powered-by {
+      color: var(--color-light);
+    }
+  }
+
+  // ABOUT PAGE
+  .about {
+    background-color: var(--color-dark);
+  }
+
+  // PORTFOLIO PAGE
+  .portfolio {
+    background-color: var(--color-dark);
+  }
+
+  // CONTACT PAGE
+  .contact {
+    background-color: var(--color-dark);
+  }
+
+  .form {
+    background-color: var(--color-gray);
+
+    &__label {
+      color: var(--color-light);
+    }
+
+    &__input-text,
+    &__textarea {
+      background-color: var(--color-gray-lighter);
+      color: var(--color-light-lighter-2);
+    }
+  }
+
+  .form-contact {
+    background-color: var(--color-gray);
+  }
+}

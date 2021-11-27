@@ -1,0 +1,22 @@
+mixin tab(data)
+  .util-box__tab
+    figure.util-box__tab-thumbnail.util-box__tab-thumbnail--primary
+      span.util-box__tab-icon #{data.icon}
+    .util-box__tab-text #{data.text}
+
+mixin tag(data)
+  span.util-box__tag #{'#' + data}
+
+mixin utilbox(data, type)
+  .util-box
+    h3.util-box__heading #{data.heading}
+
+    if type === 'tab'
+      .util-box__tab-group
+        each tab in data.collection
+          +tab(tab)
+
+    else if type === 'tag'
+      .util-box__tag-group
+        each tag in data.collection
+          +tag(tag)

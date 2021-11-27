@@ -1,0 +1,82 @@
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom {
+  &--sm {
+    margin-bottom: 1.5rem;
+  }
+
+  &--md {
+    margin-bottom: 4rem;
+  }
+
+  &--lg {
+    margin-bottom: 8rem;
+  }
+
+  &--xl {
+    margin-bottom: 10rem;
+  }
+}
+
+.u-margin-top {
+  &--sm {
+    margin-top: 1.5rem;
+  }
+
+  &--md {
+    margin-top: 4rem;
+  }
+
+  &--lg {
+    margin-top: 8rem;
+  }
+
+  &--xl {
+    margin-top: 10rem;
+  }
+}
+
+.u-margin-right {
+  &--sm {
+    margin-right: 1.5rem;
+  }
+
+  &--md {
+    margin-right: 4rem;
+  }
+
+  &--lg {
+    margin-right: 8rem;
+  }
+
+  &--xl {
+    margin-right: 10rem;
+  }
+}
+
+.u-margin-left {
+  &--sm {
+    margin-left: 1.5rem;
+  }
+
+  &--md {
+    margin-left: 4rem;
+  }
+
+  &--lg {
+    margin-left: 8rem;
+  }
+
+  &--xl {
+    margin-left: 10rem;
+  }
+}
+
+.disable-text-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

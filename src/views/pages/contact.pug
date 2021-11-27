@@ -1,0 +1,41 @@
+extends ../layout/main
+
+block content
+  section.contact
+    .contact__container.container
+      h2.heading-primary.contact__heading Let's Connect 🤝
+      p.paragraph.paragraph--abstract.contact__abstract
+        | Thank you for checking out my website 🙏. If you have any questions, feel free to shoot me an email 📧. I'll get back to you as soon as I can 🙂
+
+      .contact__form-container
+        form.form.form-contact
+          .form__group.form-contact__name
+            label.form__label(for="name") Name
+            input#name.form__input-text(type="text", name="name")/
+
+          .form__group.form-contact__company
+            label.form__label(for="company") Company
+            input#company.form__input-text(type="text", name="company")/
+
+          .form__group.form-contact__phone
+            label.form__label(for="phone") Phone
+            input#phone.form__input-text(type="tel", name="phone")/
+
+          .form__group.form-contact__email
+            label.form__label(for="email") Email
+            input#email.form__input-text(type="email", name="email")/
+
+          .form__group.form-contact__subject
+            label.form__label(for="subject") Subject
+            input#subject.form__input-text(type="text", name="subject")/
+
+          .form__group.form-contact__subject
+            label.form__label(for="message") Message
+            textarea#message.form__textarea(name='message', rows='5')/
+
+          .form__group.form__group--btn.form-contact__btn
+            button.btn.btn--primary(type="submit") Submit
+            button.btn(type="button") Clear
+
+      .contact__artwork-container
+        img.contact__artwork(src="/src/img/color-themes/green/get-in-touch.svg")/

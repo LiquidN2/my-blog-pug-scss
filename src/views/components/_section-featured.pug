@@ -1,0 +1,57 @@
+include ../components/_card
+include ../components/_util-box
+
+-
+  self.cards = [{
+    heading: 'Design Philosophy',
+    topic: '🖼️ Design',
+    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum nesciunt officia perferendis quisquam quod...',
+    date: '11th Nov 2021',
+    time: '5:04 PM',
+    imgUrl: '/src/img/design.jpg'
+  },{
+    heading: 'Why should we use Tyescript',
+    topic: '🖥️ Coding',
+    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum nesciunt officia perferendis quisquam quod...',
+    date: '8th Nov 2021',
+    time: '9:04 AM',
+    imgUrl: '/src/img/coding.jpg'
+  }]
+
+  self.topics = {
+    heading: 'Topics',
+    collection: [{
+      icon: '🖥️',
+      text: 'Programming / Dev'
+    }, {
+      icon: '🖼️',
+      text: 'Design / User Experience'
+    }, {
+      icon: '🏃‍♂️',
+      text: 'Health & Fitness'
+    }, {
+      icon: '🧘‍♂️',
+      text: 'Well-being & Mindfulness'
+    }]
+  }
+
+  self.tags = {
+    heading: 'Popular Tags',
+    collection: ['javascript', 'react', 'nodejs', 'typescript',
+      'html', 'css', 'frontend', 'backend', 'webdev', 'coding']
+  };
+
+// SECTION FEATURED
+section.section-featured
+  .section-featured__container.container
+    .section-featured__left
+      h3.section-featured__heading Recently Published
+
+      .section-featured__card-list
+        each item in self.cards
+          +card(item)
+
+    .section-featured__right
+      +utilbox(self.topics, 'tab')
+
+      +utilbox(self.tags, 'tag')

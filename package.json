@@ -1,0 +1,22 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "license": "MIT",
+  "packageManager": "yarn@3.1.0",
+  "source": [
+    "src/views/pages/index.pug"
+  ],
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build",
+    "clear:build": "rm -r dist"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "@prettier/plugin-pug": "^1.17.1",
+    "parcel": "^2.0.1",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4"
+  }
+}

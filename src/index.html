@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles/main.scss" />
+    <script type="module" src="scripts/index.ts" defer></script>
+    <title>🚀 Hugh's Home</title>
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="container header__container">
+        <!-- LOGO BOX -->
+        <a class="header__logo-box" href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__logo"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <div class="header__logo-text">Hugh's Home</div>
+        </a>
+
+        <!-- SEARCH -->
+        <form class="header__search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__search-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+          <input
+            type="text"
+            class="header__search-input"
+            placeholder="Search for projects"
+          />
+        </form>
+
+        <!-- NAV & TOGGLE -->
+        <div class="header__group-nav-toggle">
+          <!-- NAV -->
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="./about.html" class="header__nav-link">About Me</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="./portfolio.html" class="header__nav-link">
+                  Portfolio
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a href="./contact.html" class="header__nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- TOGGLE -->
+          <div class="header__toggle-container">
+            <label class="toggle">
+              <input
+                id="toggle-dark-mode"
+                type="checkbox"
+                class="toggle__checkbox"
+              />
+
+              <span class="toggle__slider toggle__slider--round">
+                <span class="toggle__icon-win toggle__icon-win--dark">🌙️</span>
+                <span class="toggle__icon-win toggle__icon-win--light">☀️</span>
+                <!-- DARK/MOON ICON -->
+                <!--                <svg-->
+                <!--                  xmlns="http://www.w3.org/2000/svg"-->
+                <!--                  class="toggle__icon toggle__icon&#45;&#45;dark"-->
+                <!--                  fill="none"-->
+                <!--                  viewBox="0 0 24 24"-->
+                <!--                  stroke="currentColor"-->
+                <!--                >-->
+                <!--                  <path-->
+                <!--                    stroke-linecap="round"-->
+                <!--                    stroke-linejoin="round"-->
+                <!--                    stroke-width="2"-->
+                <!--                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"-->
+                <!--                  />-->
+                <!--                </svg>-->
+
+                <!-- LIGHT/SUN ICON -->
+                <!--                <svg-->
+                <!--                  xmlns="http://www.w3.org/2000/svg"-->
+                <!--                  class="toggle__icon toggle__icon&#45;&#45;light"-->
+                <!--                  fill="none"-->
+                <!--                  viewBox="0 0 24 24"-->
+                <!--                  stroke="currentColor"-->
+                <!--                >-->
+                <!--                  <path-->
+                <!--                    stroke-linecap="round"-->
+                <!--                    stroke-linejoin="round"-->
+                <!--                    stroke-width="2"-->
+                <!--                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"-->
+                <!--                  />-->
+                <!--                </svg>-->
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main class="main">
+      <!-- SECTION HERO START -->
+      <section class="section-hero">
+        <div class="section-hero__container container">
+          <div class="section-hero__text-box">
+            <h1 class="section-hero__heading section-hero__heading--main">
+              Hi, I'm <span class="gradient">Hugh Nguyen</span>.<br />
+              JavasScript Developer
+            </h1>
+            <h4 class="section-hero__heading section-hero__heading--sub">
+              Specialized in <span>React</span>, <span>NextJS</span> &
+              <span>NodeJS</span>
+            </h4>
+            <div class="section-hero__cta u-margin-top--sm">
+              <a class="btn btn--primary u-margin-right--sm" href="#">
+                Contact Me 👋
+              </a>
+              <a class="btn" href="#">About Me 🐱‍💻</a>
+            </div>
+          </div>
+
+          <div class="section-hero__artwork-container">
+            <img
+              class="section-hero__artwork"
+              src="img/color-themes/green/typing-code.svg"
+              alt="programming"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- SECTION HERO END -->
+
+      <section class="section-greet">
+        <div class="section-greet__container container">
+          <h2 class="section-greet__heading">Welcome to My Playground</h2>
+          <p class="section-greet__text">
+            "I started this website with the purpose to explore, design, express
+            and play with my ideas via building an application, drawing a
+            picture or simply writing a blog post within the confine of
+            technology, web development, health and well-being. Thank you for
+            visiting." 🙂
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION FEATURED START -->
+      <section class="section-featured">
+        <div class="section-featured__container container">
+          <!-- SECTION FEATURED - LEFT COLUMN -->
+          <div class="section-featured__left">
+            <h3 class="section-featured__heading">Recently Published</h3>
+
+            <div class="section-featured__card-list">
+              <article class="card">
+                <img
+                  class="card__thumbnail"
+                  src="img/design.jpg"
+                  alt="design"
+                />
+                <div class="card__text-box">
+                  <a href="#" class="card__topic card__topic--primary"
+                    >🖼️ &nbsp; Design</a
+                  >
+                  <h5 class="card__heading">Design Philosophy</h5>
+                  <p class="card__excerpt">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                    adipisci ipsum nesciunt officia perferendis quisquam quod...
+                  </p>
+                  <time class="card__datetime">
+                    📅 9th Nov 2021 - 🕜 4:00pm
+                  </time>
+                </div>
+              </article>
+
+              <article class="card">
+                <img
+                  class="card__thumbnail"
+                  src="img/coding.jpg"
+                  alt="coding"
+                />
+                <div class="card__text-box">
+                  <a href="#" class="card__topic card__topic--primary">
+                    💻 &nbsp; Coding
+                  </a>
+                  <h5 class="card__heading">Why use Typescript?</h5>
+                  <p class="card__excerpt">
+                    ratione tenetur velit. Amet consequatur dolor hic nesciunt
+                    quas repellat? Distinctio est nemo perferendis...
+                  </p>
+                  <time class="card__datetime">
+                    📅 9th Nov 2021 - 🕜 4:00pm
+                  </time>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- SECTION FEATURED - RIGHT COLUMN -->
+          <div class="section-featured__right">
+            <div class="util-box">
+              <h3 class="util-box__heading">Topics</h3>
+              <div class="util-box__tab-group">
+                <div class="util-box__tab">
+                  <figure
+                    class="
+                      util-box__tab-thumbnail util-box__tab-thumbnail--primary
+                    "
+                  >
+                    <span class="util-box__tab-icon">💻</span>
+                  </figure>
+                  <div class="util-box__tab-text">Programming / Dev</div>
+                </div>
+                <div class="util-box__tab">
+                  <figure
+                    class="
+                      util-box__tab-thumbnail util-box__tab-thumbnail--primary
+                    "
+                  >
+                    <span class="util-box__tab-icon">🖼️</span>
+                  </figure>
+                  <div class="util-box__tab-text">Design / User Experience</div>
+                </div>
+                <div class="util-box__tab">
+                  <figure
+                    class="
+                      util-box__tab-thumbnail util-box__tab-thumbnail--primary
+                    "
+                  >
+                    <span class="util-box__tab-icon">🏃️</span>
+                  </figure>
+                  <div class="util-box__tab-text">Health / Fitness</div>
+                </div>
+                <div class="util-box__tab">
+                  <figure
+                    class="
+                      util-box__tab-thumbnail util-box__tab-thumbnail--primary
+                    "
+                  >
+                    <span class="util-box__tab-icon">🧘‍♂️‍️</span>
+                  </figure>
+                  <div class="util-box__tab-text">Well-Being / Mindfulness</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="util-box">
+              <h3 class="util-box__heading">Popular Tags</h3>
+              <div class="util-box__tag-group">
+                <span class="util-box__tag">#javascript</span>
+                <span class="util-box__tag">#react</span>
+                <span class="util-box__tag">#nodejs</span>
+                <span class="util-box__tag">#typescript</span>
+                <span class="util-box__tag">#html</span>
+                <span class="util-box__tag">#css</span>
+                <span class="util-box__tag">#frontend</span>
+                <span class="util-box__tag">#backend</span>
+                <span class="util-box__tag">#webdev</span>
+                <span class="util-box__tag">#coding</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION FEATURED END -->
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__column footer__column--full">
+          <div class="footer__logo-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="footer__logo"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div class="footer__logo-text">Hugh's Home</div>
+          </div>
+          <p class="footer__copyright">
+            Design by FlexiBlog. Built by Hugh Nguyen.
+          </p>
+          <p class="footer__powered-by">
+            Powered by
+            <img
+              src="img/nextjs-logo-dark.svg"
+              alt="Next.JS logo"
+              class="footer__powered-by-logo"
+            />
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+  </body>
+</html>
