@@ -1,4 +1,39 @@
 extends ../../layout/main
 
+mixin filterButton(label, name)
+  .filter__item-container
+    input.filter__input(type='checkbox', id=`${name}`, name=`${name}`)/
+    label.filter__item(for=`${name}`) #{ label }
+
 block content
-  p Blogs
+  -
+    blogs = [{
+      topic: 'Dev',
+      heading: 'Why use Typescript',
+      excerpt: 'A tour booking app built with NodeJS Express and Pug templating system',
+      date: '11/11/2019',
+      imgUrl: '/src/img/coding.jpg'
+    }, {
+      topic: 'Design',
+      heading: 'Philosophy of Design',
+      excerpt: 'An online clothing store built with React and NodeJS Express',
+      date: '27/11/2021',
+      imgUrl: '/src/img/clothing-store.jpg'
+    }]
+
+  section.blogs
+    .blogs__container.container
+      h2.heading-primary.blogs__heading Blogs
+
+      form.blogs__filter.filter.filter__list
+        +filterButton('Programming / Dev', 'dev')
+        +filterButton('Design / User Experience', 'ux')
+        +filterButton('Health & Fitness', 'health')
+        +filterButton('Well-being & Mindfullness', 'mind')
+
+      .blogs__list
+        each blog in blogs
+          +card(blog, false, 'blogs__item')
+
+      .portfolio__pagination
+        +pagination(3, 5)

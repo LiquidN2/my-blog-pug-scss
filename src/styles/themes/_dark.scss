@@ -113,6 +113,25 @@
     }
   }
 
+  // PAGINATION
+  .pagination {
+    background-color: var(--color-gray);
+
+    &__item {
+      color: var(--color-light);
+
+      &--prev,
+      &--next {
+        background-color: var(--color-dark);
+
+        &:hover {
+          background-color: var(--color-primary);
+          color: var(--color-dark);
+        }
+      }
+    }
+  }
+
   // FOOTER
   .footer {
     background-color: var(--color-gray);
@@ -133,6 +152,11 @@
 
   // PORTFOLIO PAGE
   .portfolio {
+    background-color: var(--color-dark);
+  }
+
+  // BLOG PAGE
+  .blogs {
     background-color: var(--color-dark);
   }
 

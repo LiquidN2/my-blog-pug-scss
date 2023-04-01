@@ -1,10 +1,15 @@
 {
   "name": "my-blog",
   "version": "1.0.0",
-  "license": "MIT",
-  "packageManager": "yarn@3.1.0",
+  "description": "",
+  "author": "Hugh Nguyen",
+  "license": "ISC",
   "source": [
-    "src/views/pages/index.pug"
+    "src/views/pages/index.pug",
+    "src/views/pages/about.pug",
+    "src/views/pages/contact.pug",
+    "src/views/pages/blogs/index.pug",
+    "src/views/pages/portfolio/index.pug"
   ],
   "scripts": {
     "start": "parcel --no-cache",
@@ -12,11 +17,11 @@
     "clear:build": "rm -r dist"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
-    "@prettier/plugin-pug": "^1.17.1",
-    "parcel": "^2.0.1",
-    "prettier": "^2.4.1",
-    "sass": "^1.43.4"
+    "@parcel/transformer-pug": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "@prettier/plugin-pug": "^2.4.2",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.7",
+    "sass": "^1.60.0"
   }
 }

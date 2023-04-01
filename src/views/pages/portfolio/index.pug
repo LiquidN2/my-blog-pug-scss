@@ -2,12 +2,12 @@ extends ../../layout/main
 
 mixin filterButton(label, name)
   .filter__item-container
-    input.filter__input(type="checkbox", id=`${name}`, name=`${name}`)/
-    label.filter__item(for=`${name}`) #{label}
+    input.filter__input(type='checkbox', id=`${name}`, name=`${name}`)/
+    label.filter__item(for=`${name}`) #{ label }
 
 block content
   -
-    self.portfolio = [{
+    portfolio = [{
       topic: 'NodeJS',
       heading: 'Natours',
       excerpt: 'A tour booking app built with NodeJS Express and Pug templating system',
@@ -47,7 +47,7 @@ block content
 
       // PORTFOLIO_LIST
       .portfolio__list
-        each project in self.portfolio
+        each project in portfolio
           +card(project, true, 'portfolio__item')
 
       .portfolio__pagination

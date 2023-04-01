@@ -1,5 +1,5 @@
 -
-  self.imgPath = '/src/img'
+  imgPath = '/src/img'
 
 // FOOTER
 footer.footer
@@ -13,11 +13,14 @@ footer.footer
         | Design copyright by ElegantStack. Built from scratch & added personal touch by&nbsp;
         span Hugh Nguyen.
         br/
-        a.footer__external-link--text(href="https://www.freepik.com/vectors/work", target="_blank")
+        a.footer__external-link--text(
+          href='https://www.freepik.com/vectors/work',
+          target='_blank'
+        )
           | Work vector created by stories - www.freepik.com
 
       p.footer__powered-by Powered by
         img.footer__powered-by-logo(
-          src=`${self.imgPath}/nextjs-logo-dark.svg`,
-          alt="NextJS Logo"
+          src=`${imgPath}/nextjs-logo-dark.svg`,
+          alt='NextJS Logo'
         )/

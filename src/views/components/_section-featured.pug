@@ -1,21 +1,21 @@
 -
-  self.cards = [{
+  cards = [{
     heading: 'Design Philosophy',
-    topic: '🖼️ Design',
+    topic: 'Design',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum nesciunt officia perferendis quisquam quod...',
     date: '11th Nov 2021',
     time: '5:04 PM',
     imgUrl: '/src/img/design.jpg'
   },{
-    heading: 'Why should we use Tyescript',
-    topic: '🖥️ Coding',
+    heading: 'Why should we use Typescript',
+    topic: 'Coding',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum nesciunt officia perferendis quisquam quod...',
     date: '8th Nov 2021',
     time: '9:04 AM',
     imgUrl: '/src/img/coding.jpg'
   }]
 
-  self.topics = {
+  topics = {
     heading: 'Topics',
     collection: [{
       icon: '🖥️',
@@ -32,7 +32,7 @@
     }]
   }
 
-  self.tags = {
+  tags = {
     heading: 'Popular Tags',
     collection: ['javascript', 'react', 'nodejs', 'typescript',
       'html', 'css', 'frontend', 'backend', 'webdev', 'coding']
@@ -45,10 +45,10 @@ section.section-featured
       h3.section-featured__heading Recently Published
 
       .section-featured__card-list
-        each item in self.cards
+        each item in cards
           +card(item)
 
     .section-featured__right
-      +utilbox(self.topics, 'tab')
+      +utilbox(topics, 'tab')
 
-      +utilbox(self.tags, 'tag')
+      +utilbox(tags, 'tag')

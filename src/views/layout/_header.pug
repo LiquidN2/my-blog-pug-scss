@@ -1,32 +1,34 @@
 include ../components/mixins/_logo
 
 -
-  self.pagePath = '/src/views/pages'
+  var pagePath = 'http://localhost:1234'
 
 // HEADER
 header.header
   .header__container.container
     // LOGO BOX
-    a.header__logo-box(href="/")
+    a.header__logo-box(href='/')
       +logo('header__logo')
       .header__logo-text Hugh's Home
-
 
     // SEARCH
     form.header__search
       svg.header__search-icon(
-        xmlns="http://www.w3.org/2000/svg",
-        fill="none",
-        viewBox="0 0 24 24",
-        stroke="currentColor"
+        xmlns='http://www.w3.org/2000/svg',
+        fill='none',
+        viewBox='0 0 24 24',
+        stroke='currentColor'
       )
         path(
-          stroke-linecap="round",
-          stroke-linejoin="round",
-          stroke-width="2",
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          stroke-linecap='round',
+          stroke-linejoin='round',
+          stroke-width='2',
+          d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
         )/
-      input.header__search-input(type="text", placeholder="Search for projects")/
+      input.header__search-input(
+        type='text',
+        placeholder='Search for projects'
+      )/
 
     // NAV & DARK MODE TOGGLE
     .header__group-nav-toggle
@@ -34,20 +36,18 @@ header.header
       nav.header__nav
         ul.header__nav-list
           li.header__nav-item
-            a.header__nav-link(href=`${self.pagePath}/about.pug`) About Me
+            a.header__nav-link(href=`${pagePath}/about.html`) About Me
           li.header__nav-item
-            a.header__nav-link(href=`${self.pagePath}/portfolio/index.pug`) Portfolio
+            a.header__nav-link(href=`${pagePath}/portfolio/index.pug`) Portfolio
           li.header__nav-item
-            a.header__nav-link(href=`${self.pagePath}/blogs/index.pug`) Blog
+            a.header__nav-link(href=`${pagePath}/blogs/index.pug`) Blog
           li.header__nav-item
-            a.header__nav-link(href=`${self.pagePath}/contact.pug`) Contact
+            a.header__nav-link(href=`${pagePath}/contact.html`) Contact
 
       // DARK MODE TOGGLE
       .header__toggle-container
         label.toggle
-          input#toggle-dark-mode.toggle__checkbox(type="checkbox")/
+          input#toggle-dark-mode.toggle__checkbox(type='checkbox')/
           span.toggle__slider.toggle__slider--round
             span.toggle__icon-win.toggle__icon-win--dark 🌙
             span.toggle__icon-win.toggle__icon-win--light ☀️
-
-

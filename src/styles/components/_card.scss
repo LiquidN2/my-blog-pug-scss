@@ -6,9 +6,10 @@
   padding: 1.5rem;
   border-radius: 1.5rem;
   transition: all 0.2s;
+  align-items: center;
 
   &:hover {
-    cursor: pointer;
+    //cursor: pointer;
     transform: translateY(-2px);
     box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
     //@include box-shadow;
@@ -31,7 +32,7 @@
   }
 
   &__text-box {
-    padding: 2rem 3rem;
+    padding: 1rem 1rem 1rem 2.5rem;
   }
 
   &--vertical &__text-box {
@@ -64,6 +65,15 @@
     font-size: 2rem;
     color: var(--color-gray);
     margin-bottom: 2rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__heading-link {
+    text-decoration: none;
   }
 
   &__excerpt {
